@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content= "width=device-width, initial scale=1.0">
+    <title>Docment</title>
+</head>
+<body>
+    <h3>Js programs</h3>
+    </body>
+    <script>
+//1.W rite a javascript prgrm to compute the sum of two given integers.if the two values arew the same,then return triple their sum.
+     function sum(x,y){
+        if(x==y){
+            return 3*(x+y);
+        }else{
+            return x+y
+        }
+    }
+    console.log(sum(20,10));
+    console.log(sum(10,10));
+
+//2.Write a javascript prgm to check wether a given postive number is a multiple of 3or 7.
+     function multiple(number){
+        if(number%3==0 || number%7==0){
+            return true;
+        }else{
+            return false;
+        }
+        }
+        console.log(multiple(18))
+        console.log(multiple(21))
+        console.log(multiple(50))
+        console.log("==========")
+
+//3.Writ e a javascript prgrm to check wether two numbers are in range 40..60or 70..100 inclusive.
+function checkNumbersInRange(num1, num2) {
+    function inRange(x) {
+        return (x >= 40 && x <= 60) || (x >= 70 && x <= 100);
+    }
+    
+    return inRange(num1) && inRange(num2);
+}
+
+// Example usage:
+console.log(checkNumbersInRange(45, 55));  // true (both in the range 40-60)
+console.log(checkNumbersInRange(85, 90));  // true (both in the range 70-100)
+console.log(checkNumbersInRange(45, 75));  // false (one in each range)
+console.log(checkNumbersInRange(30, 50));  // false (30 is out of the range)
+console.log("==============")
+
+//4.Write a javascript program to check it contains vowel or not.
+     function vowelCheck(str){
+        str = str.toLowerCase();
+        if(str === 'a'||str === 'e' ||str === 'i'|| str === 'o'|| str === 'u'){
+            return 'Str is vowel';
+        }else{
+            return 'Str is not vowel';
+        }
+    
+     }
+     console.log(vowelCheck("I"))
+     console.log(vowelCheck("b"))
+     console.log(vowelCheck("z"))
+
+//5.Write a javascript prgrm to check it contains prime or not.
+    function prime(num){
+        if(num<1){
+            return "Not a prime number"
+        }
+        for(let i=2;i<num;i++){
+            if(num%2==0){
+                return "Not a prime number"
+            }
+        }
+        return "Prime number"
+    }
+    console.log(prime(7));
+    console.log(prime(4));
+
+//6.Write a javascript prgrm to find the factorial of a number.
+     function factorial(n){
+        if(n===0 || n===1){
+            return 1;
+        }else{
+            return n*factorial(n-1);
+        }
+     }
+     console.log(factorial(5));
+     console.log(factorial(0))
+    
+
+     
+
+</script>

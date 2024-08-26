@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional</title>
+</head>
+<body>
+    <h1>Conditional Statements or Decitions</h1>
+    <ol>
+        <li>If Condition</li>
+        <li>If-else</li>
+        <li>Switch Condition</li>
+    </ol>
+    <hr>
+    <h1>If condition</h1>
+    <p>The if Statement is the most basic Conditional Statement. it evaluates a condition and, if the condition is true, itr executes a block of code</p>
+
+    <h1>If-else</h1>
+    <p>The if Statement is most basic consitonal Statement. it  evaluates a condition and, ifthe condition is true, it executes a bolck of code</p>
+</body>
+<script>
+
+    // if condition
+
+    let x=10
+    if(x>5){
+        console.log('X is Grater')
+    }
+    let str=''
+    if(str==''){
+        console.log('string is empty')
+    }
+    let y=20
+    if(y%2==0){
+        console.log('y is even')
+    }
+
+    // if-else condition 
+
+    // let num=10
+    // let num=parseInt(prompt('enter the number'))
+    // if(num>5){
+    //     console.log('Number is grater')
+    // }
+    // else{
+    //     console.log('Number is lesser')
+    // }
+
+    // check number is +ve, -ve or zero
+    let number=6
+    if(number>0){
+        console.log('number is positive')
+    }
+    else if(number<0){
+        console.log('number is negative')
+    }
+    else if(number==0){
+        console.log('number is equal')
+    }
+    else{
+        console.log('invalid number')
+    }
+
+
+    let ass='Sri'
+    if(typeof ass=='number'){
+        console.log('You have entered number')
+    }
+    else if(typeof ass=='string'){
+        console.log('you have entered string')
+    }
+
+    // grade checking
+    let score=parseFloat(prompt('enter your grade'))
+    if(score>=90){
+        grade='A'
+        console.log('your grade is',grade)
+    }
+    else if (score>=80) {
+        grade='B'
+        console.log('your grade is',grade)
+    } 
+    else if (score>60) {
+        grade='C'
+        console.log('Your grade is',grade)
+    }
+    else{
+        grade='Fail'
+        console.log('your grade is',grade)
+    }
+
+    // types of traingles
+    let a=2;
+    let b=3;
+    let c=1;
+    let traingle;
+
+    if(a===b && b===c && c===a){
+        traingle='Equilateral'
+        console.log('Equilateral triangle')
+    }
+    else if(a===b || b===c || c===a){
+        traingle='Isosceles'
+        console.log('Isosceles triangle')
+    }
+    else{
+        traingle='Scalene'
+        console.log('Scalene traingle')
+    }
+
+    // Display login status of user tracking input from user
+
+
+
+//Switch statement
+  //let day='Tuesday'
+   let day=prompt('Enter the day')
+   //let day_case=day.toLowercase()
+   let msg;
+   switch(day){
+    case 'Monday':
+        msg='First day of the week'
+        break;
+    case 'Wednesday':
+        msg='Third day of the week'
+        break;
+    case 'Saturday':
+        msg='Weekend'
+        break;
+    default:
+        msg='Regular day of the week'
+    }
+    console.log(msg)
+
+//Multiple switch cases
+   let month='July'
+   let season;
+   switch(month){
+       case 'January':
+       case 'Febuary':
+        season='Winter'
+        break;
+       case 'March':
+       case 'April':
+       case 'May':
+        season='Summer'
+        break;
+        case 'June':
+        case 'July':
+        season='rainy'
+        break;
+    default:
+        msg='Regular month'
+     }
+     console.log(season)
+
+// // grade checking
+    if(score>=90){
+        grade='A+'
+        console.log('your grade is',grade)
+    }
+    else if (score>=50) {
+        grade='B+'
+        console.log('your grade is',grade)
+    } 
+    else if (score>=80) {
+        grade='C+'
+        console.log('Your grade is',grade)
+    }
+    switch(grade){
+        case 'A+':
+        msg='score>=90'
+        break;
+        case 'B+':
+        msg='score>=50'
+        break;
+        case 'C+':
+        msg='score>=80'
+        break;
+    default:
+        console.log('Your grade is A+')
+    }
+ 
+    
+
+
+
+
+
+   
+</script>
+</html>

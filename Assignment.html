@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content= "width=device-width, initial scale=1.0">
+    <title>Docment</title>
+</head>
+<body>
+    <h3>Js Assignments</h3>
+    </body>
+    <script>
+//1.1.Write a Javascript program on Fibonacci series.
+// Function to generate Fibonacci series up to n terms
+function fibonacciSeries(n) {
+    let fibSeries = [];
+    let a = 0, b = 1, nextTerm;
+
+    for (let i = 1; i <= n; i++) {
+        fibSeries.push(a);
+        nextTerm = a + b;
+        a = b;
+        b = nextTerm;
+    }
+
+    return fibSeries;
+}
+
+// Example: Generate the first 10 terms of the Fibonacci series
+let n = 10;
+let result = fibonacciSeries(n);
+console.log("Fibonacci Series:", result);
+
+//2. Write a JavaScript program to convert a temperature from Celsius to Fahrenheit.
+    // Function to convert Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+    let fahrenheit = (celsius * 9/5) + 32;
+    return fahrenheit;
+}
+
+// Example: Convert 25°C to Fahrenheit
+let celsius = 25;
+let res = celsiusToFahrenheit(celsius);
+console.log(`${celsius}°C is equal to ${result}°F`);
+
+//3.Write a javascript program to find square root of number.
+// Function to find the square root of a number
+
+function findSquareRoot(number) {
+    if (number < 0) {
+        return "Square root of a negative number is not a real number.";
+    }
+    return Math.sqrt(number);
+}
+
+// Example: Find the square root of 25
+let number = 25;
+let = findSquareRoot(number);
+console.log(`The square root of ${number} is ${result}`);
+
+//4. Write a JavaScript program to generate a random integer between two given numbers.
+    // Function to generate a random integer between two given numbers (inclusive)
+    function getRandomInteger(min, max) {
+    // Ensure that min and max are integers
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    
+    // Generate the random integer
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Example: Generate a random integer between 1 and 10
+let min = 1;
+let max = 10;
+let randomInt = getRandomInteger(min, max);
+console.log(`Random integer between ${min} and ${max}: ${randomInt}`);
+
+//5.Write a javascript program to check if the passed string is palindrome or not.
+     // Function to check if a string is a palindrome
+       function isPalindrome(str) {
+    // Convert the string to lowercase and remove non-alphanumeric characters
+    str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    // Reverse the string
+    let reversedStr = str.split('').reverse().join('');
+
+    // Check if the original string is the same as the reversed string
+    return str === reversedStr;
+}
+
+// Example: Check if the string "A man, a plan, a canal, Panama" is a palindrome
+let stringToCheck = "A man, a plan, a canal, Panama";
+let = isPalindrome(stringToCheck);
+console.log(`Is the string "${stringToCheck}" a palindrome? ${result}`);
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
