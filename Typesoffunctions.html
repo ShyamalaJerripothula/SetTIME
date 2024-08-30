@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content= "width=device-width, initial scale=1.0">
+    <title>Docment</title>
+</head>
+<body>
+    <h3>Arrow Function</h3>
+    <p>Arrow function is a consice way of writing the function and it is introduce in ecma script</p>
+
+    /*Anonymous function*/
+    <p>An Anonymous function  in js is a function without a name.
+    it is often used in situations where a function is needed temporarily, 
+    such as  passing a function as an argument function.</p>
+
+    /*Global or Local scope*/
+    <p>in Javascript, variable can have either global or local scope.
+    global scope menas the varaiable is accessible throughout the entire program,
+    while local scope menas the variable is only accessible within a specific block of or function.</p>
+
+    /*Closure Function*/
+    <p> A Closure is the combiniation of a function bundled together(elcosed)
+     with references to its surrounding state(the lexical enivornement).
+    in other words a closure gives to aceess to an outer function's scope from an inner function.</p>
+
+    /*Pure Function*/
+    <p>In Javascrit , a pure function is a function that,given the same input,will always return the same outout
+    and has no side effects.(does not modify the state)</p>
+    </body>
+    <script>
+//Arrow function
+    const greet=()=>console.log("Good morning");
+    greet()
+
+ //arrow function with parameters
+    const operators=(x,y,z)=>console.log(x+y+z);
+    operators(2,3,4)
+
+
+    const sub=(a,b)=>{
+        return(a-b);
+    }
+     //console.log('substraction of numbers is',sub(4,2))
+     console.log(`substraction of number is'${sub(3,1)}`)
+
+    
+    const square=(num)=>{
+        return num*num;
+    }
+    console.log(`math.square of the number is ${square(5)}`)
+
+//arrow function with default paramaters
+    const greetName=(name="Sri")=>console.log('Good morning ${name}')
+    greetName()
+    greetName('Sri')
+
+//Area of rectangle
+    const area=(height,width=2)=>{
+        return height*width;
+    }
+    console.log(`Area of rectangle ${area(2,3)}`)
+    console.log(`Area of rectangle ${area(2)}`)
+
+
+//Anonymous function
+    var addition=function(x,y){
+        return x+y;
+     }
+     console.log(`Addition of numbers ${addition(2,3)}`)
+
+     var subs=function(){
+        console.log(`Substraction of two numbers ${2,3}`)
+     }
+
+//Global variable and Local variable
+     //global scope
+        /*var global="This is a global variable";
+        function scope(){
+            console.log(global);
+        }
+        scope()
+
+    //Local scope
+    let globalLet=function scopeLet(){
+        console.log(globalLet);
+    }
+    scopeLet()   */
+
+//Closure Function
+        /*function outerFunction(){
+            var outer="This is outer variable";
+            function InnerFunction(){
+                console.log(`outer ${outer}`)
+            }
+            return InnerFunction();
+        } 
+        var closureExample=outerFunction();
+        closureExample();*/
+
+        //2.
+        function couter(){
+            var count=0;
+            function increment(){
+                count++;
+                console.log(`Counter is ${count}`)
+            }
+            return increment();
+        }
+        let closureEx=couter()
+        console.log(`${closureEx}`)
+
+//Pure Function
+        function pureFunction(a,b){
+            return a+b;
+        }
+        const result1=pureFunction(2,3);
+        const result2=pureFunction(2,3);
+        console.log('result1',result1,'result2',result2)
+
+
+
+    </script>
+    </html>

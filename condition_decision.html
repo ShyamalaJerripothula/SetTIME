@@ -181,6 +181,35 @@
     default:
         console.log('Your grade is A+')
     }
+
+//Switch With functions
+    function monday(){
+        return "First day of the week";
+    }
+    function wed(){
+        return "third day of the week";
+    }
+    function friday(){
+        return "Fifth day of the week";
+    }
+    function daysofWeek(day){
+        switch(day){
+            case 'Mon':
+                return monday();
+                break;
+            case 'Wed':
+                return wednesday();
+                break;
+            case 'Fri':
+                return friday();
+                break;
+            default:
+            return "Have a good day";
+        }
+        
+    }
+    console.log(daysofWeek('Mon'))
+
  
     
 

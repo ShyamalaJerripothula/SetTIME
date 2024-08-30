@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">mb
+    <title>Document</title>
+</head>u
+<body>
+    <h2>1.ToFixed  2.To Precision  3.To String.  4.ParseInt.  5.isNaN  6.isFinite  7.Number.isInteger</h2>
+<script>
+//Tofixed:Converts a number into a string rounding the number to specified number of decimals.
+    let fixed=5.6789;
+    console.log('To fixed:',fixed.toFixed(2))
+
+//TO Precision:Formats a number to specifed length.
+    let num=123.456;
+    console.log(num.toPrecision(5))
+
+//To String: Coverts a string and return an integer.
+    let number=123
+    let str=number.toString()
+    console.log(str,typeof(str))
+
+//parseInt:parses a string and return an integer.
+    let str1 ="10";
+    console.log(parseInt(str1));
+
+//isNaN:Checks whether a value is NaN(not a number).
+    let num1 = NaN;
+    console.log(isNaN(num1));
+
+//isFinite():Check whether a value is finite,return true on +ve,-ve numbers and returns false on infinity and NaN.
+    let num2 = 0/0;
+    console.log(isFinite(num2));
+//Number.isInteger():Checks wether a value is an integer.
+    console.log(Number.isInteger(-10));
+    console.log(Number.isInteger(10.5));
+</script>
+</html>
