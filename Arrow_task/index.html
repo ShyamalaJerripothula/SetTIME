@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Arrow function *Global and local  *closure  *purefunction  *call stack</h3>
+</body>
+<script>
+// Arrow function that multiplies a number by 2
+const multiplyByTwo = (num) => num * 5;
+
+// Arrow function that checks if a number is even
+const isEven = (number) => number % 2 === 0;
+
+//Test function
+console.log(multiplyByTwo(5));  
+console.log(multiplyByTwo(10)); 
+
+console.log(isEven(4));  
+console.log(isEven(3));
+
+// Global variable
+let globalVar = 10;
+
+function scopeTest() {
+    // Local variable
+    let localVar = 20;
+// Accessing global and local variables inside the function
+    console.log("Inside scopeTest:");
+    console.log("globalVar:", globalVar); 
+    console.log("localVar:", localVar);  
+}
+// Calling the function
+scopeTest();
+
+  console.log("Outside scopeTest:");
+  console.log("globalVar:", globalVar);
+
+     
+
+//Closure function.
+    function outerFunction() {
+    // Variable in the outer function's scope
+    let outerVar = 5;
+
+    // Inner function that has access to outerVar
+    function innerFunction() {
+        return outerVar;
+    }
+
+    // Return the inner function, creating a closure
+    return innerFunction;
+}
+
+// Store the returned function in a variable
+let closure = outerFunction();
+
+// Call the closure and print the result
+console.log(closure())
+
+//Pure function.
+// Function to sum two numbers
+function sum(a, b) {
+    return a + b;
+}
+
+// Function to multiply two numbers
+function multiply(x, y) {
+    return x * y;
+}
+
+// Testing the functions
+console.log(sum(2, 4)); 
+console.log(multiply(6, 5)); 
+
+//Call stack
+function functionC() {
+    console.log("In functionC");
+}
+
+function functionB() {
+    functionC(); 
+    console.log("In functionB");
+}
+
+function functionA() {
+    functionB();
+    console.log("In functionA");
+}
+
+// Call functionA to see the order of execution
+functionA();
+</script>
+</html>

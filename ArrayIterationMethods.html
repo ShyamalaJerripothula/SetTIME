@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of Array Iteration Methods</h3>
+    <p> 1. Map  2. forEach  3.Filter  4. Find   5.Some  6.  Reduce</p>
+</body>
+<script>
+//1. Map: Is a collection of key/value pairs that can any type of data as a key or value and remeber the order of 
+ //its entries .it is used to Iterate over all the elements in an array, which results in a new array.
+    
+    /*let arr=[1,2,3,4,5]
+    let result=arr.map(num=>num*2)
+    console.log(result)
+
+    let fruits=['apple','grapes','orange']
+    let result_fruits=fruits.map(fruit=>fruit.toUpperCase())
+    console.log(result_fruits)
+
+    let students=[{id:101,name:'Sri',grade:'A+'},{id:102,name:'Sam',grade:'A'},{id:103,name:'joy',grade:'B'}]
+    let result_students=students.map(student=>({id:student.id,name:student.name,grade:student.grade}))
+    console.log(result_students)
+
+    let circles=[{radius:1},{rasius:2},{radius:3}]
+    let circle_result=circles.map(circle=>Math.PI*Math.pow(circle.radius,2))
+    console.log(circle_result)
+
+    let numbers=[54,23,90,0,45]
+    let sort_number=numbers.sort((a,b)=>a-b)
+    let result_sort=sort_number.map(number=>number)
+    console.log(result_sort)*/
+    
+//2.forEach:The for each method in javascript is to iterate over element in an array.It takes a callback functions
+//as an argument and applies that function to each elemnt of the array ,one by one,without creation a new array.
+
+   /* let number=[1,2,3,4,5]
+    number.forEach(num=>{
+        console.log(num)
+    })
+
+    number.forEach(double=>{
+        console.log(double*2)
+    })
+
+    let square=[]
+    numbers.forEach(num=>{
+        square.push(num*2)
+    })
+    console.log(square)
+
+    
+    let fruits1=['apple','banana','manago']
+    fruits1.forEach(fruit=>{
+        console.log(fruit.toUpperCase())
+    })*/
+
+//3.Filter: The filter method in javascript is used to create a new array containing elemts that pass a certain condition.
+//it takes a callback funtion as an arugement and applies that function to each element in the array.the resulting array
+// only includes elements for which the callback function returns true.
+
+    /*let numbers1=[1,2,3,4,5,6,7,8]
+    let result=numbers1.filter(num=>num%2==0)
+    console.log(result)
+
+    let fruits2=['apple','banana','kiwi','grape','pear','mango']
+    let fruits_result=fruits2.filter(fruit=>fruit.length<5)
+    console.log(fruits_result)
+
+    let arr1=[1,null,3,7,9,undefined,10,'a']
+    let arr_result=arr.filter(value=>value==null && value!==undefined)
+    console.log('array result',arr_result)
+
+    let product=[{id:101,name:'Laptop',price:8800},{id:102,name:'Mobile',price:500},{id:103,name:'Tablet',price:750}]
+    let product_res=products.filter(product=>product.price>500)
+    console.log(product_res)*/
+
+//Find:The find method in JS is used to return the first element in an array that saticifies a given testing funvtion.
+//ti stops execution onces such an element is found, and it does not iterate over the entire array.the find methods
+//is praticulary useful when you want to locate a specific element in an array based on a condition.
+    
+    /*let numbers1=[1,2,3,4,5,6,7,8]
+    let result=numbers1.find(num=>num%2==0)
+    console.log(result)
+
+    
+    let fruits2=['apple','banana','kiwi','grape','pear','mango']
+    let fruits_result=fruits2.find(fruit=>fruit.length<=4)
+    console.log(fruits_result)
+
+    
+    let product=[{id:101,name:'Laptop',price:8800},{id:102,name:'Mobile',price:500},{id:103,name:'Tablet',price:750}]
+    let product_res=products.find(product=>product.price>500)
+    console.log(product_res)*/
+
+//Some: Some methods is used to check if at least one element in an array satisfies a given condition.it returns true
+//if any element passes the test otherwise,it returns false.
+   /* let numbers1=[1,2,3,4,5,6,7,8]
+    let result=numbers1.some(num=>num%2==0)
+    console.log(result)
+
+    
+    let fruits2=['apple','banana','kiwi','grape','pear','mango']
+    let fruits_result=fruits2.some(fruit=>fruit.length<=4)
+    console.log(fruits_result)
+
+    
+    let product=[{id:101,name:'Laptop',price:8800},{id:102,name:'Mobile',price:500},{id:103,name:'Tablet',price:750}]
+    let product_res=products.some(product=>product.price>500)
+    console.log(product_res)*/
+
+//Reduce: The reduce method in JS is used to reduce the elements of an array to a single value.
+// it takes a callback function and an intial value.
+    //(+,-,* also we use in sub, plus, multiplication)
+    let arr=[1,2,3,4,5]
+    let res_arr=arr.reduce((acc,curr)=>acc+curr,0)
+    console.log(res_arr)
+
+  
+
+
+
+
+
+
+
+   
+
+
+
+
+</script>
+</html>
