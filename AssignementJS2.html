@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Assignement JS 2</h3>
+<script>
+// 1. Write a Javascript program that removes the duplicate elements from an array?
+
+function removeDuplicates(arr) {
+    return new Set(arr);
+}
+
+
+const array = [1, 2, 2, 3, 5, 5, 6];
+const uniqueArray = removeDuplicates(array);
+console.log(uniqueArray); 
+
+// 2.Write a function that takes an array of numbers as input, filters out the even numbers, and
+// then returns the sum of the remaining numbers using a combination of filter and reduce methods?
+
+function removeFirstAndLast(str) {
+    if (str.length <= 2) {
+        return "";  
+    }
+    return str.substring(1, str.length - 1);
+}
+
+
+const originalString = "Hello";
+const newString = removeFirstAndLast(originalString);
+console.log(newString); 
+
+// 3.Write a function that takes an array of numbers as input, filters out the even numbers, and then returns 
+//the sum of the remaining numbers using a combination of filter and reduce methods?
+
+function printArrayElements(arr) {
+    arr.forEach(function(element) {
+        console.log(element);
+    });
+}
+
+
+const stringArray = ["apple", "banana", "cherry"];
+printArrayElements(stringArray);
+
+// 4.4.Write a function that takes an array of numbers as input and returns true if any of the numbers are negative,
+// otherwise false, using the some method.
+
+function hasNegativeNumber(arr) {
+    return arr.some(function(num) {
+        return num < 0;
+    });
+}
+
+
+const numbersArray = [1, 2, 3, 4, -5];
+const result = hasNegativeNumber(numbersArray);
+console.log(result);
+
+// 5.Write a function that takes an array of numbers as input, filters out the even numbers, and then returns the sum 
+//of the remaining numbers using a combination of filter and reduce methods?
+
+
+function sumOfOddNumbers(arr) {
+    return arr
+        .filter(function(num) {
+            return num % 2 !== 0;  
+        })
+        .reduce(function(sum, num) {
+            return sum + num; 
+        }, 0);  
+}
+
+const numbersArray1 = [1, 2, 3, 4, 5, 6];
+const result1 = sumOfOddNumbers(numbersArray1);
+console.log(result1);
+
+
+</script>
+</html>

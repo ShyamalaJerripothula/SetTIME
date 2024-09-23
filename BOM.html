@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Example of BOM</h3>
+    <button onclick="showAlert()">Alert Example</button>
+    <button onclick="showConfirm()">Confirm Example</button>
+    <button onclick="showPrompt()">Prompt Example</button>
+    <button onclick="showWindow()">Open/Close</button>
+    <button onclick="showBack()">Back</button>
+    <button onclick="showLocation()">Location</button>
+    <p id="output"></p>
+</body>
+<script>
+//Alert
+    function showAlert(){
+        alert('example of alert')
+    }
+//Confirm
+    function showConfirm(){
+        const user_confirm=confirm("do you want to proceed")
+        if(user_confirm){
+            const para=document.getElementById('output')
+            para.textContent="you have selected ok"
+        }else{
+            const para=document.getElementById('output')
+            para.textContent='Not proceed'
+        }
+        }
+    
+// Prompt
+    function showPrompt(){
+        const user_input=prompt('Enter your name')
+        if(user_input){
+            const para=document.getElementById('output')
+            para.textContent='Hello ${user_input} Welcome to home page '
+        }else{
+            const para=document.getElementById('output')
+            para.textContent='No name provided'
+        }
+        }
+//open/Close:Window.
+    //window.close()
+    function showWindow(){
+        window.open('https://www.google.com/search?q=google&rlz=1C1CHBF_enIN981IN981&oq=google&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTITCAEQLhiDARjHARixAxjRAxiABDIMCAIQIxgnGIAEGIoFMgYIAxBFGDsyBggEEEUYPDIGCAUQRRg8MgYIBhAFGEAyBggHEEUYQdIBCDIxNzhqMGo3qAIHsAIB&sourceid=chrome&ie=UTF-8')
+    }
+// Back
+    function showBack(){
+        history.back()
+    }
+    function showForward(){
+        history.forward()
+    }
+//Location
+    function showLocation(){
+        const location='href:${window.location.hostname}'
+        const para=document.getElementById('output')
+        para.textContent=location
+    }
+
+   
+</script>
+</html>

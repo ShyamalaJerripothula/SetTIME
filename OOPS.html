@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>OOPS</h3>
+    <h4>1. CLASS  2.OBJECT  3.CONSTRUCTOR</h4>
+    <p>Object-oriented programming(oops) is a programing padradigm that uses objects, which can contain data in the form 
+        of fields(often known as properities or attributes)and codein the form of procedured(often known methods).
+        javascript is a versatile language that supports OOP principles through its prototype based inheritance syatem. </p>
+    <p> 1. CLASS:   a Class in javascript is a blueprint for creating objects.
+    it defines set of proprerities and methods created from the class will have.</p>
+</body>
+<script>
+//Basic exaple of class.
+     class JavaScript{
+        method1(){
+            console.log('Example of method1')
+        }
+        method2(){
+            console.log('Example of method2')
+        }
+     }
+     //new is the instance of class(means:holding multiple objects)
+     let method_ex=new JavaScript()
+     method_ex.method1()
+     method_ex.method2()
+// CONSTRUCTOR Methods.(class with constructor)
+//1 example.
+    class vehicle{
+        constructor(name){
+    //Object Instance
+         this.name=name
+        }
+    display(){
+        console.log(`${this.name} is driving`)
+    }
+    }
+    let car=new vehicle('John')
+        car.display()
+//2 example.
+    class Employee{
+        constructor(id,name,salary){
+            this.id=id
+            this.name=name
+            this.salary=salary
+        }
+    display(){
+        console.log(`id is ${this.id} and the name is ${this.name} and the salary is ${this.salary}`)
+    }
+    }
+    let emp=new Employee(101,'Harry',10000)
+    emp.display()  
+//Updating salary
+    class Emp{
+        constructor(id,name,salary){
+            this.id=id
+            this.name=name
+            this.salary=salary
+        }
+    display(){
+        console.log(`id is ${this.id} and the name is ${this.name} and the salary is ${this.salary}`)
+    }
+    updateSalary(newSalary){
+        this.salary=newSalary
+    }
+}
+let emp1=new Emp(102,'Sam',15000)
+emp1.display()
+emp1.updateSalary(200000)
+emp1.display()
+
+
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+        background-color: #f0f0f0; /* Light theme background */
+        color: #333; /* Light theme text color */
+        padding: 20px;
+    }
+    body.dark-mode {
+        background-color: #333; /* Dark theme background */
+        color: #f0f0f0; /* Dark theme text color */
+    }
+    .theme-toggle {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .theme-toggle:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+    <h1>Light/Dark Theme Toggle</h1>
+    <p>Click the button below to toggle between light and dark themes.</p>
+    <button class="theme-toggle" id="themeToggle">Switch to Dark Theme</button>
+
+</div>
+</body>
+<script>
+    const themeToggleButton = document.getElementById('themeToggle');
+
+themeToggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    // Update button text based on the current theme
+    if (document.body.classList.contains('dark-mode')) {
+        themeToggleButton.textContent = 'Switch to Light Theme';
+    } else {
+        themeToggleButton.textContent = 'Switch to Dark Theme';
+    }
+});
+
+</script>
+
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <style>
+    /*body{
+      text-align: center;
+    }
+    #counter-application{
+      background-color:antiquewhite;
+      width:500px;
+      height:300px;
+      text-align: center;
+    }
+    p{
+      font-size: 3rem;
+    }
+    button{
+      background-color:lavender;
+      font-size: 1rem;
+      border:none;
+      border-radius:10%;
+      padding:20px;
+      font-family: 'Times New Roman', Times, serif;
+      cursor:pointer;
+    }*/
+  </style>
+  <style>
+   .calculator{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    width:500px;
+    height:300px;
+    background-color: rgb(225, 105, 173);
+   }
+   input[type="text"]{
+   width:480px;
+   padding:15px;
+   font-size:20px;
+   }
+   input[type="button"]{
+   padding:10px;
+   margin:10px;
+   background-color: rgb(126, 237, 155);
+   cursor: pointer;
+   border-radius: 4px;
+   border:none;
+   }
+
+   
+   body, input {
+      font-size: 18px;
+      padding: 10px;
+    }
+</style>
+<body>
+<!--Counter Application-->
+<!-- <div id="counter-application">
+  <p id="counter">0</p>
+  <button id="increment">increment</button>
+  <button id="decrement">decrement</button>
+  <button id="reset">reset</button>
+</div> -->
+
+
+<!--calculator application-->
+ <input type="text" id="result" />
+   <div class="calculator">
+    <input type="button" value="1" onclick="displayResult('1')"/>
+    <input type="button" value="2" onclick="displayResult('2')"/>
+    <input type="button" value="3" onclick="displayResult('3')"/>
+    <input type="button" value="+" onclick="displayResult('+')"/>
+    <input type="button" value="4" onclick="displayResult('4')"/>
+    <input type="button" value="5" onclick="displayResult('5')"/>
+    <input type="button" value="6" onclick="displayResult('6')"/>
+    <input type="button" value="-" onclick="displayResult('-')"/>
+    <input type="button" value="7" onclick="displayResult('7')"/>
+    <input type="button" value="8" onclick="displayResult('8')"/>
+    <input type="button" value="9" onclick="displayResult('9')"/>
+    <input type="button" value="*" onclick="displayResult('*')"/>
+    <input type="button" value="0" onclick="displayResult('0')"/>
+    <input type="button" value="C" onclick="clearCal()"/>
+    <input type="button" value="=" onclick="equalRes()"/>
+    <input type="button" value="/" onclick="displayResult('/')"/>
+   </div>
+</body>
+
+<input type="text" id="firstInput" placeholder="Enter 'green' to change color">
+<input type="text" id="secondInput" placeholder="Second input">
+
+<script>
+  // let count=0;
+  // let counterDisplay=document.getElementById('counter')
+  // document.getElementById('increment').addEventListener('click',()=>{
+  //   count++;
+  //   counterDisplay.textContent=count
+  // })
+  // document.getElementById('decrement').addEventListener('click',()=>{
+  //   count--;
+  //   counterDisplay.textContent=count
+  // })
+  // document.getElementById('reset').addEventListener('click',()=>{
+  //   count=0;
+  //   counterDisplay.textContent=count
+  // })
+
+  /*//calculator application
+    function displayResult(val){
+      document.getElementById('result').value+=val
+    }
+    function clearCal(){
+      document.getElementById('result').value=' ';
+    }
+    function equalRes(){
+      const expression=document.getElementById('result').value
+      const cal_res=eval(expression)
+      //console.log(cal_res)
+      document.getElementById('result').value=cal_res
+    }*/
+   
+
+ //Colour task
+   const firstInput = document.getElementById('firstInput');
+    const secondInput = document.getElementById('secondInput');
+    
+    firstInput.addEventListener('input', function() {
+      const inputValue = firstInput.value.toLowerCase();
+      
+      if (inputValue === 'pink') {
+        document.body.style.backgroundColor = 'pink';
+        secondInput.style.backgroundColor = 'pink';
+      } else {
+        document.body.style.backgroundColor = '';
+        secondInput.style.backgroundColor = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+  
+</script> 
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+<script>
+    const element=document.createElement('div')
+    console.log(element)
+
+
+    element.className="demo"
+    element.id="example"
+    element.style.backgroundColor="pink"
+    element.style.padding="12px"
+    const addText=element.append('Hello world')
+    document.body.append(element)
+   
+    //create a paragraph element
+    const paragraph = document.createElement('p');
+    console.log(paragraph)
+    paragraph.append('this is the the paragraph inside the div element')
+    paragraph.style.color = 'blue';
+    paragraph.style.fontSize = '15px';
+    document.body.append(paragraph);
+
+  
+    //remove the element
+    const remove_para=document.getElementById('demo')
+    remove_para.remove()
+
+    //creating list tags
+    const ul=document.createElement('ul')
+    const items=['item1','item2','item3']
+    items.forEach(text=>{
+        const li=document.createElement('li')
+        li.textContent=text
+        ul.appendChild(li)
+    })
+    document.body.appendChild(ul)
+
+    
+
+
+
+
+</script>
+</html>

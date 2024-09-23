@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>AddEventListeners</h3>
+<p> in JavaScript, the AddEventListener method is used to attach an event handler to a specific element.An event handler
+ is a function that will be excuted when a specific event occurs on the element,such as a click,mouseover or keypress  </p>
+   <h4> 1.Mouse Event</h4>
+   <button id="myBtn">Click</button>
+   <div id="mouseOver" style="width: 100px; height: 100px; background-color: aqua;"></div>
+
+   <div id="mouseOut" style="width: 100px; height: 100px; background-color: blue;"></div>
+   <div id="mouseDown" style="width: 100px; height: 100px; background-color: pink;"></div>
+   <div id="mouseUP" style="width: 100px; height: 100px; background-color: yellow;"></div>
+   <div id="mouseMove" style="width: 100px; height: 100px; background-color: navyblue;"></div>
+   <hr>
+   <p>2. KeyBoardEvents</p>
+   <input type="text" id="down" placeholder="enter a text..."/>
+   <input type="text" id="Up" placeholder="enter a text..."/>
+   <hr>
+
+   <input type="text" id="textInput" placeholder="enter a text.." />
+   <p3>Form Events</p3>
+   <select id="myDropdown">
+    <option >Option1</option>
+    <option >Option2</option>
+    <option>Option3</option>
+   </select>
+
+    <form id="ele">
+        <input type="text" placeholder="enter a text..." />
+        <button>Submit</button>
+    </form>
+    <hr>
+    <input id="Blur" type="text" placeholder="enter a text..." />
+</body>
+<script>
+    //MouseEvents
+// 1 . Click
+    document.getElementById('myBtn').addEventListener("click",function(){
+        console.log('you clicked the button')
+    })
+//2 .MouseOver
+    document.getElementById('mouseOver').addEventListener('mouseover',()=>{
+        document.getElementById('mouseOver').style.backgroundColor="green"
+    })
+// 3. mouseOut
+    document.getElementById('mouseOut').addEventListener('mouseout',()=>{
+        document.getElementById('mouseOut').style.backgroundColor="pink"
+    })
+    document.getElementById('mouseDown').addEventListener('mousedown',()=>{
+        document.getElementById('mouseDown').style.backgroundColor="black"
+    })
+     document.getElementById('mouseUP').addEventListener('mouseup',()=>{
+        document.getElementById('mouseUP').style.backgroundColor="orange"
+    })
+    document.getElementById('mouseMove').addEventListener('mousemove',()=>{
+        document.getElementById('mouseMove').style.backgroundColor="purple"
+    })
+     
+    //Keyboard Events
+//1. keydown
+    document.getElementById('down').addEventListener('keydown',(event)=>{
+        console.log('you press a key(keydown):',event.key)
+    })
+//2.KeyUP
+    document.getElementById('Up').addEventListener('keyup',(event)=>{
+        console.log('when key is release(keyup):',event.key)
+    })
+    //Form Event
+//1. onChange
+    document.getElementById('myDropdown').addEventListener('change',(e)=>{
+        console.log('you have selected:',e.target.value)
+    })
+   
+// 3. Focus
+     document.getElementById('textInput').addEventListener('focus', () =>{
+            document.getElementById('textInput').style.backgroundColor = 'yellow';
+        });
+
+// 4. Blur
+        document.getElementById('Blur').addEventListener('blur', () => {
+            console.log('Input field lost focus');
+        });
+
+    
+document.getElementById('ele').addEventListener('submit',()=>{
+    alert('submitted succesfully')
+})
+</script>
+</html>
