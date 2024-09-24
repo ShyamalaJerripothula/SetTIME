@@ -7,16 +7,21 @@
 </head>
 <body>
     <h3>OOPS</h3>
-    <h4>1. CLASS  2.OBJECT  3.CONSTRUCTOR</h4>
-    <p>Object-oriented programming(oops) is a programing padradigm that uses objects, which can contain data in the form 
-        of fields(often known as properities or attributes)and codein the form of procedured(often known methods).
-        javascript is a versatile language that supports OOP principles through its prototype based inheritance syatem. </p>
-    <p> 1. CLASS:   a Class in javascript is a blueprint for creating objects.
-    it defines set of proprerities and methods created from the class will have.</p>
+    <h4>1. CLASS  2.OBJECT  3.CONSTRUCTOR   4. inheritance  5.  Polymorphism</h4>
+<p>Object-oriented programming(oops) is a programing padradigm that uses objects, which can contain data in the form 
+of fields(often known as properities or attributes)and code in the form of procedured(often known methods).
+javascript is a versatile language that supports OOP principles through its prototype based inheritance syatem. </p>
+ <p> 1. CLASS:   a Class in javascript is a blueprint for creating objects.
+ it defines set of proprerities and methods created from the class will have.</p>
+ <p id="demo"></p>
+<p>2.Object: obj in JS are cpmplex data types that can store data have asspciated behaviour through properties nd methods.</p>
+<P> 3. Inheritance: is a mechanism that allows a class (subclass/derived class)to inherit properitites and methods 
+from another class(superclass/base class).Its promotes code reuse and establishes an "is-a" lationship between classes.</P>
+<p> 4. Polyorphism: it allows objects of different classes to be trated as object of common base class.</p>
 </body>
 <script>
 //Basic exaple of class.
-     class JavaScript{
+    class JavaScript{
         method1(){
             console.log('Example of method1')
         }
@@ -72,6 +77,91 @@ let emp1=new Emp(102,'Sam',15000)
 emp1.display()
 emp1.updateSalary(200000)
 emp1.display()
+
+//Area of rectangle.
+   class rectangle{
+    constructor(width,height){
+        this.width=width
+        this.height=height
+    }
+    area(){
+        //return this.width*this.height
+        console.log(`area is ${this.width*this.height}`)
+    }
+}
+let rect=new rectangle(5,3)
+//console.log(rect.area())
+rect.area()
+
+//2. Object
+    const person={
+        name:'Sri',
+        age:25,
+        address: 'Telagana',
+        country:{
+            city:'hyd',
+            pin:2345
+        },
+        greet:function(){
+            console.log(`hello ${this.name} and ${this.age}`)
+        }
+     }
+     console.log(person)
+     console.log(person.age)
+     console.log(person.country.city)//Dot Notation
+     console.log(person["address"])//Bracket Notation
+     console.log(person["countyr"])
+     document.getElementById('demo').innerHTML=JSON.stringify(person)
+     person.greet()
+
+//3. Inheritance.
+    class Vehicle{
+        constructor(type,brand){
+            this.type=type
+            this.brand=brand
+        }
+        start(){
+            console.log(`Type is ${this.type} and brand is ${this.brand}`)
+        }
+    }
+    class Car extends Vehicle{
+        constructor(brand,model){
+            //super inheritts parent class properties
+            super('car',brand)
+            this.model=model
+        }
+        display(){
+            console.log(`brand is ${this.brand} and model is ${this.madel}`)
+        }
+    }
+    let obj=new Car('ABC','BMW')
+    obj.start()
+    obj.display()
+
+//4. Polymorphism.
+    class Vehicle1{
+        move(){
+            console.log('Vehicle1 is moving')
+        }
+    }
+    class Car1 extends Vehicle1{
+        move(){
+            console.log('Car1 is moving')
+        }
+    }
+    class Airplane extends Vehicle1{
+        move(){
+            console.log('Airplane is moving')
+        }
+    }
+    let obj1=new Car1()
+    let obj2=new Airplane()
+    obj1.move()
+    obj2.move()
+
+
+
+   
 
 
 </script>
