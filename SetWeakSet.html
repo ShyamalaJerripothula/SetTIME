@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Set and Weak set</h3>
+    <p> 1.Set: is built-in object in javascript that allows you to store unique values of any type, whether primitive values
+         or object references.</p>
+    <p> 2. Weakset: is also a built -in object in javascript that allows you to store object references only 
+        (not primitive values). </p>
+</body>
+<script>
+// 1. Set
+    const mySet=new Set()
+    console.log(mySet.add(1))
+    console.log(mySet.add(2))
+    console.log(mySet.add(3))
+    //duplicate values is not allowed console.log(mySet.add(1))
+    console.log(mySet.add('hello'))
+    console.log(mySet.add(10))
+    console.log(mySet.add({name:'Sri'}))
+//delete
+    console.log(mySet.delete(3))
+    console.log(mySet)
+//finding the length of Set
+    console.log(mySet.size)
+
+// 2. WeakSet
+    const weak_set=new WeakSet()
+    let obj1={name:"Sri"}
+    let obj2={name:"Sam"}
+    console.log(weak_set.add(obj1))
+    console.log(weak_set.add(obj2))
+//has method
+    console.log(weak_set.has(obj1))
+    console.log(weak_set.has(obj2))
+//delete
+    weak_set.delete(obj1)
+    console.log(weak_set.has(obj1))
+//NUll
+    obj2=null
+    console.log(weak_set.has(obj2))
+
+</script>
+</html>
